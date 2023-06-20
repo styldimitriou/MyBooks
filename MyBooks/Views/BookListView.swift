@@ -23,7 +23,7 @@ struct BookListView: View {
                     }
                     Spacer()
                     Button(action: {
-                        #warning("Add favorite action")
+                        bookViewModel.toggleFavorite(book: book)
                     }) {
                         Image(systemName: book.isFavorite ? "heart.fill" : "heart")
                             .foregroundColor(book.isFavorite ? .red : .gray)
