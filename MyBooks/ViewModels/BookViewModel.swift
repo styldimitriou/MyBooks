@@ -13,27 +13,16 @@ class BookViewModel: ObservableObject {
     @Published var favoriteBooks: [Book] = []
     
     private var subscribers: Set<AnyCancellable> = []
-        
-    init() {
+    private var booksService: BooksServiceProtocol
+    
+    init(booksService: BooksServiceProtocol = BooksService()) {
+        self.booksService = booksService
         fetchBooks()
     }
     
     func fetchBooks() {
-        guard let url = URL(string: "https://gutendex.com/books") else {
-            return
-        }
-        
-        URLSession.shared.dataTaskPublisher(for: url)
-            .tryMap { response -> Data in
-                guard
-                    let httpURLResponse = response.response as? HTTPURLResponse,
-                    httpURLResponse.statusCode == 200
-                else {
-                    throw BookError.statusCode
-                }
-                return response.data
-            }
-            .decode(type: BookListRaw.self, decoder: JSONDecoder())
+        booksService
+            .fetchBooks()
             .map { bookList -> [Book] in
                 bookList.results.map({ Book(id: $0.id,
                                             title: $0.title,
