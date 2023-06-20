@@ -101,10 +101,10 @@
 		E52255D92A41E3A90059392A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E5A3002B2A41C35800849C67 /* ContentView.swift */,
 				E52255DA2A41E3D20059392A /* BookListView.swift */,
-				E52255DC2A41E5870059392A /* FavoriteListView.swift */,
+				E5A3002B2A41C35800849C67 /* ContentView.swift */,
 				E52255DF2A421D240059392A /* CoverPageView.swift */,
+				E52255DC2A41E5870059392A /* FavoriteListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
