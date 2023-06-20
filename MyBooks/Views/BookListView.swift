@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct BookListView: View {
-    var books: [Book]
+    @ObservedObject var bookViewModel = BookViewModel()
     
     var body: some View {
         NavigationView {
-            List(books) { book in
+            List(bookViewModel.books) { book in
                 HStack(spacing: 10) {
                     CoverPageView(coverImageURL: book.coverImageURL ?? nil)
                     VStack(alignment: .leading) {
@@ -38,6 +38,6 @@ struct BookListView: View {
 
 struct BookListView_Previews: PreviewProvider {
     static var previews: some View {
-        BookListView(books: [])
+        BookListView()
     }
 }

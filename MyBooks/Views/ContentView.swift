@@ -8,20 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject private var bookViewModel = BookViewModel()
+    
     var body: some View {
         TabView {
-            BookListView(books: [])
+            BookListView(bookViewModel: bookViewModel)
                 .tabItem {
                     Label("Books", systemImage: "book")
                 }
             
-            FavoriteListView(favoriteBooks: [])
+            FavoriteListView(bookViewModel: bookViewModel)
                 .tabItem {
                     Label("Favorites", systemImage: "heart.fill")
                 }
         }
         .onAppear {
-            #warning("Fetch books from API")
+            bookViewModel.fetchBooks()
         }
     }
 }
