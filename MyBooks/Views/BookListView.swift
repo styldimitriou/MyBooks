@@ -14,14 +14,7 @@ struct BookListView: View {
         NavigationView {
             List(books) { book in
                 HStack(spacing: 10) {
-                    AsyncImage(url: book.coverImageURL) { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(height: 200)
-                    } placeholder: {
-                        ProgressView()
-                    }
+                    CoverPageView(coverImageURL: book.coverImageURL ?? nil)
                     VStack(alignment: .leading) {
                         Text(book.title)
                             .font(.headline)
