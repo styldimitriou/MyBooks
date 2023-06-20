@@ -11,6 +11,7 @@ protocol Endpoint {
     var baseURL: String { get }
     var path: String {get}
     var parameter: [URLQueryItem] { get }
+    // Additional properties can be added in the future (i.e headers, method etc)
     
     func getURL() -> URL?
 }
