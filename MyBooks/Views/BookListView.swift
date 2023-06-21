@@ -12,7 +12,8 @@ struct BookListView: View {
     
     var body: some View {
         NavigationView {
-            List(bookViewModel.books) { book in
+            List(bookViewModel.books.indices, id: \.self) { index in
+                let book = bookViewModel.books[index]
                 HStack(spacing: 10) {
                     CoverPageView(coverImageURL: book.coverImageURL ?? nil)
                     VStack(alignment: .leading) {
@@ -29,6 +30,12 @@ struct BookListView: View {
                             .foregroundColor(book.isFavorite ? .red : .gray)
                     }
                     .buttonStyle(PlainButtonStyle())
+                }
+                .onAppear {
+                    // Load more books when reaching the end of the list
+                    if book.id == bookViewModel.books.last?.id {
+                        bookViewModel.fetchMoreBooks()
+                    }
                 }
             }
             .navigationBarTitle("Books")

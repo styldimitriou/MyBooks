@@ -14,6 +14,7 @@ class BookViewModel: ObservableObject {
     
     private var subscribers: Set<AnyCancellable> = []
     private var booksService: BooksServiceProtocol
+    private var nextPage: String?
     
     init(booksService: BooksServiceProtocol = BooksService()) {
         self.booksService = booksService
@@ -21,8 +22,29 @@ class BookViewModel: ObservableObject {
     }
     
     func fetchBooks() {
-        booksService
-            .fetchBooks()
+        let bookList = booksService.fetchBooks()
+        saveNextPageURL(bookList: bookList)
+        saveBookList(bookList: bookList)
+    }
+    
+    func fetchMoreBooks() {
+        guard let nextPage = self.nextPage else { return }
+        
+        let bookList = booksService.fetchMoreBooks(nextPage: nextPage)
+        saveNextPageURL(bookList: bookList)
+        saveBookList(bookList: bookList)
+    }
+    
+    private func saveNextPageURL(bookList: AnyPublisher<BookListRaw, NetworkError>) {
+        bookList
+            .sink (receiveCompletion: { _ in }) { booklist in
+                self.nextPage = booklist.next
+            }
+            .store(in: &subscribers)
+    }
+    
+    private func saveBookList(bookList: AnyPublisher<BookListRaw, NetworkError>) {
+        bookList
             .map { bookList -> [Book] in
                 bookList.results.map({ Book(id: $0.id,
                                             title: $0.title,
@@ -36,7 +58,7 @@ class BookViewModel: ObservableObject {
             }
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { _ in }) { [weak self] books in
-                self?.books = books
+                self?.books += books
             }
             .store(in: &subscribers)
     }
