@@ -10,6 +10,7 @@ import Combine
 
 protocol BooksServiceProtocol {
     func fetchBooks() -> AnyPublisher<BookListRaw, NetworkError>
+    func fetchMoreBooks(nextPage: String) -> AnyPublisher<BookListRaw, NetworkError>
 }
 
 class BooksService: BooksServiceProtocol {
@@ -23,5 +24,18 @@ class BooksService: BooksServiceProtocol {
         let endpoint = MyBooksEndpoints.books
         let request = Request(endpoint: endpoint)
         return networkRequest.request(request)
+    }
+    
+    func fetchMoreBooks(nextPage: String) -> AnyPublisher<BookListRaw, NetworkError> {
+        let queryItems = getURLQueryParams(stringURL: nextPage)
+        let endpoint = MyBooksEndpoints.moreBooks(queryItems: queryItems)
+        let request = Request(endpoint: endpoint)
+        return networkRequest.request(request)
+    }
+    
+    private func getURLQueryParams(stringURL: String) -> [URLQueryItem] {
+        guard let url = URL(string: stringURL) else { return [] }
+        let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        return components?.queryItems ?? []
     }
 }
