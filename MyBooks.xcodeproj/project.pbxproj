@@ -29,6 +29,10 @@
 		E5A300452A41C35900849C67 /* MyBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A300442A41C35900849C67 /* MyBooksUITests.swift */; };
 		E5A300472A41C35900849C67 /* MyBooksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A300462A41C35900849C67 /* MyBooksUITestsLaunchTests.swift */; };
 		E5FA8BE72A44381D003E8DDF /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA8BE62A44381D003E8DDF /* RequestTests.swift */; };
+		E5FA8BE92A4441B9003E8DDF /* NetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA8BE82A4441B9003E8DDF /* NetworkRequestTests.swift */; };
+		E5FA8BEB2A445954003E8DDF /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = E5FA8BEA2A445954003E8DDF /* books.json */; };
+		E5FA8BED2A446768003E8DDF /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA8BEC2A446768003E8DDF /* URLSessionMock.swift */; };
+		E5FA8BEF2A446F9F003E8DDF /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA8BEE2A446F9F003E8DDF /* URLSessionProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +78,10 @@
 		E5A300442A41C35900849C67 /* MyBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksUITests.swift; sourceTree = "<group>"; };
 		E5A300462A41C35900849C67 /* MyBooksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E5FA8BE62A44381D003E8DDF /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
+		E5FA8BE82A4441B9003E8DDF /* NetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTests.swift; sourceTree = "<group>"; };
+		E5FA8BEA2A445954003E8DDF /* books.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
+		E5FA8BEC2A446768003E8DDF /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		E5FA8BEE2A446F9F003E8DDF /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,9 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				E52255F72A42454B0059392A /* Endpoint.swift */,
-				E52255F92A42458F0059392A /* Request.swift */,
-				E52255FB2A4246A70059392A /* NetworkRequest.swift */,
 				E52255FD2A4246F40059392A /* NetworkError.swift */,
+				E52255FB2A4246A70059392A /* NetworkRequest.swift */,
+				E52255F92A42458F0059392A /* Request.swift */,
+				E5FA8BEE2A446F9F003E8DDF /* URLSessionProtocol.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -207,7 +216,10 @@
 		E5FA8BE52A4437F3003E8DDF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E5FA8BEA2A445954003E8DDF /* books.json */,
+				E5FA8BE82A4441B9003E8DDF /* NetworkRequestTests.swift */,
 				E5FA8BE62A44381D003E8DDF /* RequestTests.swift */,
+				E5FA8BEC2A446768003E8DDF /* URLSessionMock.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -325,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5FA8BEB2A445954003E8DDF /* books.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +363,7 @@
 				E52255DB2A41E3D20059392A /* BookListView.swift in Sources */,
 				E5A3002C2A41C35800849C67 /* ContentView.swift in Sources */,
 				E52255DD2A41E5870059392A /* FavoriteListView.swift in Sources */,
+				E5FA8BEF2A446F9F003E8DDF /* URLSessionProtocol.swift in Sources */,
 				E5A3002A2A41C35800849C67 /* MyBooksApp.swift in Sources */,
 				E52255E92A422C180059392A /* BookError.swift in Sources */,
 				E52255E72A4228190059392A /* BookViewModel.swift in Sources */,
@@ -365,8 +379,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5FA8BED2A446768003E8DDF /* URLSessionMock.swift in Sources */,
 				E5A3003B2A41C35900849C67 /* MyBooksTests.swift in Sources */,
 				E5FA8BE72A44381D003E8DDF /* RequestTests.swift in Sources */,
+				E5FA8BE92A4441B9003E8DDF /* NetworkRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

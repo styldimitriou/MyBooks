@@ -30,7 +30,6 @@ class BooksService: BooksServiceProtocol {
         let queryItems = getURLQueryParams(stringURL: nextPage)
         let endpoint = MyBooksEndpoints.moreBooks(queryItems: queryItems)
         let request = Request(endpoint: endpoint)
-        print(request.getURLRequest()?.url?.absoluteString)
         return networkRequest.request(request)
     }
     

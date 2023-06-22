@@ -13,7 +13,11 @@ protocol Requestable {
 }
 
 class NetworkRequest: Requestable {
-    public var requestTimeOut: Float = 30
+    private let session: URLSessionProtocol
+    
+    init(session: URLSessionProtocol = URLSession.shared) {
+        self.session = session
+    }
     
     public func request<T>(_ req: Request) -> AnyPublisher<T, NetworkError>
     where T: Decodable {
@@ -25,8 +29,7 @@ class NetworkRequest: Requestable {
             )
         }
         
-        return URLSession.shared
-            .dataTaskPublisher(for: url)
+        return session.getPublisher(for: url)
             .tryMap { output in
                 // throw an error if response is nil
                 guard output.response is HTTPURLResponse else {
