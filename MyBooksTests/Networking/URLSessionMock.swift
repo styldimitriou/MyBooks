@@ -10,7 +10,7 @@ import Combine
 @testable import MyBooks
 
 class URLSessionMock: URLSessionProtocol {
-    var jsonName = "books.json"
+    var jsonName = "bookListRaw.json"
     var statusCode = 200
     
     func getPublisher(for url: URLRequest) -> AnyPublisher<URLSession.DataTaskPublisher.Output, URLError> {

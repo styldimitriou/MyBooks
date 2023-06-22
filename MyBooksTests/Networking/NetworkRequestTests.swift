@@ -53,7 +53,7 @@ final class NetworkRequestTests: XCTestCase {
     }
     
     func testRequest_InvalidJSON() {
-        urlSession.jsonName = "booksFailed.json"
+        urlSession.jsonName = "bookListRawFailed.json"
         
         response = networkRequest.request(request)
             .receive(on: DispatchQueue.main)
