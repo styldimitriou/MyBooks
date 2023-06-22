@@ -28,6 +28,7 @@
 		E5A3003B2A41C35900849C67 /* MyBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A3003A2A41C35900849C67 /* MyBooksTests.swift */; };
 		E5A300452A41C35900849C67 /* MyBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A300442A41C35900849C67 /* MyBooksUITests.swift */; };
 		E5A300472A41C35900849C67 /* MyBooksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A300462A41C35900849C67 /* MyBooksUITestsLaunchTests.swift */; };
+		E5FA8BE72A44381D003E8DDF /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA8BE62A44381D003E8DDF /* RequestTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		E5A300402A41C35900849C67 /* MyBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A300442A41C35900849C67 /* MyBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksUITests.swift; sourceTree = "<group>"; };
 		E5A300462A41C35900849C67 /* MyBooksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E5FA8BE62A44381D003E8DDF /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 		E5A300392A41C35900849C67 /* MyBooksTests */ = {
 			isa = PBXGroup;
 			children = (
+				E5FA8BE52A4437F3003E8DDF /* Networking */,
 				E5A3003A2A41C35900849C67 /* MyBooksTests.swift */,
 			);
 			path = MyBooksTests;
@@ -199,6 +202,14 @@
 				E5A300462A41C35900849C67 /* MyBooksUITestsLaunchTests.swift */,
 			);
 			path = MyBooksUITests;
+			sourceTree = "<group>";
+		};
+		E5FA8BE52A4437F3003E8DDF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E5FA8BE62A44381D003E8DDF /* RequestTests.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5A3003B2A41C35900849C67 /* MyBooksTests.swift in Sources */,
+				E5FA8BE72A44381D003E8DDF /* RequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
