@@ -30,12 +30,13 @@ class BooksService: BooksServiceProtocol {
         let queryItems = getURLQueryParams(stringURL: nextPage)
         let endpoint = MyBooksEndpoints.moreBooks(queryItems: queryItems)
         let request = Request(endpoint: endpoint)
+        print(request.getURLRequest()?.url?.absoluteString)
         return networkRequest.request(request)
     }
     
-    private func getURLQueryParams(stringURL: String) -> [URLQueryItem] {
-        guard let url = URL(string: stringURL) else { return [] }
+    private func getURLQueryParams(stringURL: String) -> [URLQueryItem]? {
+        guard let url = URL(string: stringURL) else { return nil }
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
-        return components?.queryItems ?? []
+        return components?.queryItems
     }
 }

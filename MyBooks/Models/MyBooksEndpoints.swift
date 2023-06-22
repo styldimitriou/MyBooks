@@ -9,7 +9,7 @@ import Foundation
 
 enum MyBooksEndpoints: Endpoint {
     case books
-    case moreBooks(queryItems: [URLQueryItem])
+    case moreBooks(queryItems: [URLQueryItem]?)
     
     var baseURL: String {
         "gutendex.com"
@@ -22,10 +22,10 @@ enum MyBooksEndpoints: Endpoint {
         }
     }
     
-    var parameter: [URLQueryItem] {
+    var parameter: [URLQueryItem]? {
         switch self {
         case .books:
-            return []
+            return nil
         case .moreBooks(let queryItems):
             return queryItems
         }
