@@ -22,9 +22,6 @@ struct ContentView: View {
                     Label("Favorites", systemImage: "heart.fill")
                 }
         }
-        .onAppear {
-            bookViewModel.fetchBooks()
-        }
     }
 }
 
