@@ -30,6 +30,7 @@
 		E5A300472A41C35900849C67 /* MyBooksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A300462A41C35900849C67 /* MyBooksUITestsLaunchTests.swift */; };
 		E5B1B4BA2A448A0600E4F84E /* NetworkRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B1B4B92A448A0600E4F84E /* NetworkRequestMock.swift */; };
 		E5E1A7BB2A457FAA003796CB /* BooksServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1A7BA2A457FAA003796CB /* BooksServiceMock.swift */; };
+		E5E1A7BE2A45849E003796CB /* FavoriteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1A7BD2A45849E003796CB /* FavoriteListViewModel.swift */; };
 		E5FA8BE72A44381D003E8DDF /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA8BE62A44381D003E8DDF /* RequestTests.swift */; };
 		E5FA8BE92A4441B9003E8DDF /* NetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA8BE82A4441B9003E8DDF /* NetworkRequestTests.swift */; };
 		E5FA8BEB2A445954003E8DDF /* bookListRaw.json in Resources */ = {isa = PBXBuildFile; fileRef = E5FA8BEA2A445954003E8DDF /* bookListRaw.json */; };
@@ -82,6 +83,7 @@
 		E5A300462A41C35900849C67 /* MyBooksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E5B1B4B92A448A0600E4F84E /* NetworkRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestMock.swift; sourceTree = "<group>"; };
 		E5E1A7BA2A457FAA003796CB /* BooksServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksServiceMock.swift; sourceTree = "<group>"; };
+		E5E1A7BD2A45849E003796CB /* FavoriteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewModel.swift; sourceTree = "<group>"; };
 		E5FA8BE62A44381D003E8DDF /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
 		E5FA8BE82A4441B9003E8DDF /* NetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTests.swift; sourceTree = "<group>"; };
 		E5FA8BEA2A445954003E8DDF /* bookListRaw.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookListRaw.json; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				E52255E62A4228190059392A /* BookListViewModel.swift */,
+				E5E1A7BD2A45849E003796CB /* FavoriteListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				E52256002A4254570059392A /* MyBooksEndpoints.swift in Sources */,
 				E52255FA2A42458F0059392A /* Request.swift in Sources */,
 				E52255DB2A41E3D20059392A /* BookListView.swift in Sources */,
+				E5E1A7BE2A45849E003796CB /* FavoriteListViewModel.swift in Sources */,
 				E5A3002C2A41C35800849C67 /* ContentView.swift in Sources */,
 				E52255DD2A41E5870059392A /* FavoriteListView.swift in Sources */,
 				E5FA8BEF2A446F9F003E8DDF /* URLSessionProtocol.swift in Sources */,

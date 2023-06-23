@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct FavoriteListView: View {
-    @ObservedObject var bookViewModel: BookListViewModel
+    @ObservedObject var viewModel: FavoriteListViewModel
     
     var body: some View {
         NavigationView {
-            List(bookViewModel.favoriteBooks) { book in
+            List(viewModel.favoriteBooks) { book in
                 VStack(alignment: .leading) {
                     Text(book.title)
                         .font(.headline)
@@ -28,6 +28,6 @@ struct FavoriteListView: View {
 
 struct FavoriteListView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteListView(bookViewModel: BookListViewModel())
+        FavoriteListView(viewModel: FavoriteListViewModel())
     }
 }

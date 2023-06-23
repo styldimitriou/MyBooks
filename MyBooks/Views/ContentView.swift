@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject private var bookViewModel = BookListViewModel()
+    @ObservedObject private var bookListViewModel = BookListViewModel()
+    @ObservedObject private var favoriteListViewModel = FavoriteListViewModel()
     
     var body: some View {
         TabView {
-            BookListView(bookViewModel: bookViewModel)
+            BookListView(viewModel: bookListViewModel, favoriteListViewModel: favoriteListViewModel)
                 .tabItem {
                     Label("Books", systemImage: "book")
                 }
             
-            FavoriteListView(bookViewModel: bookViewModel)
+            FavoriteListView(viewModel: favoriteListViewModel)
                 .tabItem {
                     Label("Favorites", systemImage: "heart.fill")
                 }
+        }
+        .onAppear() {
+            bookListViewModel.fetchBooks()
         }
     }
 }

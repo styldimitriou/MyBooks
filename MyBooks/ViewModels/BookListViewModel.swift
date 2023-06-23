@@ -10,15 +10,12 @@ import Combine
 
 class BookListViewModel: ObservableObject {
     @Published var books: [Book] = []
-    @Published var favoriteBooks: [Book] = []
-    
     private var subscribers: Set<AnyCancellable> = []
     private var booksService: BooksServiceProtocol
     private var nextPage: String?
     
     init(booksService: BooksServiceProtocol = BooksService()) {
         self.booksService = booksService
-        fetchBooks()
     }
     
     func fetchBooks() {
@@ -57,7 +54,7 @@ class BookListViewModel: ObservableObject {
                 return BookError.map($0)
             }
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in }) { [weak self] books in
+            .sink(receiveCompletion: { _ in }) { [weak self] (books: [Book]) in
                 self?.books += books
             }
             .store(in: &subscribers)
@@ -66,14 +63,6 @@ class BookListViewModel: ObservableObject {
     func toggleFavorite(book: Book) {
         if let index = books.firstIndex(where: { $0.id == book.id }) {
             books[index].isFavorite.toggle()
-
-            if books[index].isFavorite {
-                favoriteBooks.append(books[index])
-            } else {
-                if let favoriteIndex = favoriteBooks.firstIndex(where: { $0.id == book.id }) {
-                    favoriteBooks.remove(at: favoriteIndex)
-                }
-            }
         }
     }
 }

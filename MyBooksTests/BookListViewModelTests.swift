@@ -105,19 +105,4 @@ class BookListViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.books[0].isFavorite)
 //        XCTAssertTrue(viewModel.favoriteBooks.contains(where: book))
     }
-    
-    func testToggleFavorite_BookIsFavorite() {
-        // Given
-        var book = MockData.book
-        book.isFavorite = true
-        viewModel.books = [book]
-        viewModel.favoriteBooks = [book]
-        
-        // When
-        viewModel.toggleFavorite(book: book)
-        
-        // Then
-        XCTAssertFalse(viewModel.books[0].isFavorite)
-//        XCTAssertFalse(viewModel.favoriteBooks.contains(where: book))
-    }
 }

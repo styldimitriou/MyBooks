@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct BookListView: View {
-    @ObservedObject var bookViewModel: BookListViewModel
+    @ObservedObject var viewModel: BookListViewModel
+    @ObservedObject var favoriteListViewModel: FavoriteListViewModel
     
     var body: some View {
         NavigationView {
-            List(bookViewModel.books.indices, id: \.self) { index in
-                let book = bookViewModel.books[index]
+            List(viewModel.books.indices, id: \.self) { index in
+                let book = viewModel.books[index]
                 HStack(spacing: 10) {
                     CoverPageView(coverImageURL: book.coverImageURL ?? nil)
                     VStack(alignment: .leading) {
@@ -24,7 +25,8 @@ struct BookListView: View {
                     }
                     Spacer()
                     Button(action: {
-                        bookViewModel.toggleFavorite(book: book)
+                        viewModel.toggleFavorite(book: book)
+                        favoriteListViewModel.updateFavoriteBooks(from: viewModel.books)
                     }) {
                         Image(systemName: book.isFavorite ? "heart.fill" : "heart")
                             .foregroundColor(book.isFavorite ? .red : .gray)
@@ -33,8 +35,8 @@ struct BookListView: View {
                 }
                 .onAppear {
                     // Load more books when reaching the end of the list
-                    if book.id == bookViewModel.books.last?.id {
-                        bookViewModel.fetchMoreBooks()
+                    if book.id == viewModel.books.last?.id {
+                        viewModel.fetchMoreBooks()
                     }
                 }
             }
@@ -45,6 +47,8 @@ struct BookListView: View {
 
 struct BookListView_Previews: PreviewProvider {
     static var previews: some View {
-        BookListView(bookViewModel: BookListViewModel())
+        #warning("Should use mocked data here to avoid network call")
+        BookListView(viewModel: BookListViewModel(),
+                     favoriteListViewModel: FavoriteListViewModel())
     }
 }
