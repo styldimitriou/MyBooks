@@ -13,6 +13,6 @@ struct Book: Identifiable, Decodable {
     let author: String
     let coverImageURL: URL?
     var isFavorite: Bool = false
-    let languages: [String]
+    let languages: String
     let downloadCount: Int
 }

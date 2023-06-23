@@ -13,13 +13,20 @@ struct FavoriteListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.favoriteBooks) { book in
-                VStack(alignment: .leading) {
-                    Text(book.title)
-                        .font(.headline)
-                    Text(book.author)
-                        .font(.subheadline)
+                HStack(spacing: 10) {
+                    CoverPageView(imageURL: book.coverImageURL, size: .thumbnail)
+                    VStack(alignment: .leading) {
+                        Text(book.title + " (\(book.languages))")
+                            .font(.headline)
+                        Text("by " + book.author)
+                            .font(.subheadline)
+                        Spacer()
+                            .frame(height: 6)
+                        Text("\(String(describing: book.downloadCount.dotFormatted())) downloads")
+                            .font(.caption2)
+                    }
+                    .padding(.vertical, 8)
                 }
-                .padding(.vertical, 8)
             }
             .navigationBarTitle("Favorites")
         }

@@ -31,6 +31,7 @@
 		E5B1B4BA2A448A0600E4F84E /* NetworkRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B1B4B92A448A0600E4F84E /* NetworkRequestMock.swift */; };
 		E5E1A7BB2A457FAA003796CB /* BooksServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1A7BA2A457FAA003796CB /* BooksServiceMock.swift */; };
 		E5E1A7BE2A45849E003796CB /* FavoriteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1A7BD2A45849E003796CB /* FavoriteListViewModel.swift */; };
+		E5E1A7C02A45A780003796CB /* Int+DotFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1A7BF2A45A780003796CB /* Int+DotFormatted.swift */; };
 		E5FA8BE72A44381D003E8DDF /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA8BE62A44381D003E8DDF /* RequestTests.swift */; };
 		E5FA8BE92A4441B9003E8DDF /* NetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA8BE82A4441B9003E8DDF /* NetworkRequestTests.swift */; };
 		E5FA8BEB2A445954003E8DDF /* bookListRaw.json in Resources */ = {isa = PBXBuildFile; fileRef = E5FA8BEA2A445954003E8DDF /* bookListRaw.json */; };
@@ -84,6 +85,7 @@
 		E5B1B4B92A448A0600E4F84E /* NetworkRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestMock.swift; sourceTree = "<group>"; };
 		E5E1A7BA2A457FAA003796CB /* BooksServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksServiceMock.swift; sourceTree = "<group>"; };
 		E5E1A7BD2A45849E003796CB /* FavoriteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewModel.swift; sourceTree = "<group>"; };
+		E5E1A7BF2A45A780003796CB /* Int+DotFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+DotFormatted.swift"; sourceTree = "<group>"; };
 		E5FA8BE62A44381D003E8DDF /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
 		E5FA8BE82A4441B9003E8DDF /* NetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTests.swift; sourceTree = "<group>"; };
 		E5FA8BEA2A445954003E8DDF /* bookListRaw.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookListRaw.json; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				E52255D32A41E2A30059392A /* BookListRaw.swift */,
 				E52255FF2A4254570059392A /* MyBooksEndpoints.swift */,
 				E52255D52A41E2C40059392A /* ResultRaw.swift */,
+				E5E1A7BF2A45A780003796CB /* Int+DotFormatted.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			files = (
 				E52255FC2A4246A70059392A /* NetworkRequest.swift in Sources */,
 				E52255FE2A4246F40059392A /* NetworkError.swift in Sources */,
+				E5E1A7C02A45A780003796CB /* Int+DotFormatted.swift in Sources */,
 				E52255D42A41E2A30059392A /* BookListRaw.swift in Sources */,
 				E52256002A4254570059392A /* MyBooksEndpoints.swift in Sources */,
 				E52255FA2A42458F0059392A /* Request.swift in Sources */,

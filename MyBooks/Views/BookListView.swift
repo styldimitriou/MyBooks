@@ -20,7 +20,7 @@ struct BookListView: View {
                     VStack(alignment: .leading) {
                         Text(book.title)
                             .font(.headline)
-                        Text(book.author)
+                        Text("by " + book.author)
                             .font(.subheadline)
                     }
                     Spacer()

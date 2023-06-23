@@ -47,7 +47,7 @@ class BookListViewModel: ObservableObject {
                                             title: $0.title,
                                             author: $0.authors.map({$0.name}).joined(separator: ","),
                                             coverImageURL: $0.formats.imageURL,
-                                            languages: $0.languages,
+                                            languages: $0.languages.map({$0}).joined(separator: ","),
                                             downloadCount: $0.downloadCount)})
             }
             .mapError {

@@ -19,7 +19,7 @@ class BookListViewModelTests: XCTestCase {
                                title: "Book 1",
                                author: "Author 1",
                                coverImageURL: URL(string:"https://example.com/book1.jpg")!,
-                               languages: ["English"],
+                               languages: "English",
                                downloadCount: 100)
     }
     
