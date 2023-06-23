@@ -8,7 +8,6 @@
 import Foundation
 
 enum BookError: Error {
-    case statusCode
     case decoding
     case invalidImage
     case invalidURL
