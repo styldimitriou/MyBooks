@@ -142,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				E52255E62A4228190059392A /* BookViewModel.swift */,
-				E52256012A4254B60059392A /* BooksService.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -182,13 +181,14 @@
 		E5A300282A41C35800849C67 /* MyBooks */ = {
 			isa = PBXGroup;
 			children = (
-				E52255F52A4244F80059392A /* Networking */,
-				E52255E52A4228010059392A /* ViewModels */,
-				E52255D92A41E3A90059392A /* Views */,
+				E5A3002D2A41C35900849C67 /* Assets.xcassets */,
 				E52255D22A41E2840059392A /* Models */,
 				E5A300292A41C35800849C67 /* MyBooksApp.swift */,
-				E5A3002D2A41C35900849C67 /* Assets.xcassets */,
+				E52255F52A4244F80059392A /* Networking */,
 				E5A3002F2A41C35900849C67 /* Preview Content */,
+				E5E1A7BC2A45824D003796CB /* Services */,
+				E52255E52A4228010059392A /* ViewModels */,
+				E52255D92A41E3A90059392A /* Views */,
 			);
 			path = MyBooks;
 			sourceTree = "<group>";
@@ -219,6 +219,14 @@
 				E5A300462A41C35900849C67 /* MyBooksUITestsLaunchTests.swift */,
 			);
 			path = MyBooksUITests;
+			sourceTree = "<group>";
+		};
+		E5E1A7BC2A45824D003796CB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E52256012A4254B60059392A /* BooksService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		E5FA8BE52A4437F3003E8DDF /* Networking */ = {
