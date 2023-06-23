@@ -12,9 +12,6 @@ import Combine
 @testable import MyBooks
 
 class BooksServiceTests: XCTestCase {
-
-    // Mock Requestable
-
     var booksService: BooksService!
     var networkRequest: NetworkRequestMock!
 
@@ -30,7 +27,7 @@ class BooksServiceTests: XCTestCase {
         super.tearDown()
     }
     
-    func loadJson(filename fileName: String) -> BookListRaw? {
+    private func loadJson(filename fileName: String) -> BookListRaw? {
         if let url = Bundle(for: type(of: self)).url(forResource: fileName, withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)

@@ -21,6 +21,7 @@
 		E52255FE2A4246F40059392A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52255FD2A4246F40059392A /* NetworkError.swift */; };
 		E52256002A4254570059392A /* MyBooksEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52255FF2A4254570059392A /* MyBooksEndpoints.swift */; };
 		E52256022A4254B60059392A /* BooksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52256012A4254B60059392A /* BooksService.swift */; };
+		E52B51682A448C9800309FE1 /* BookViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B51672A448C9800309FE1 /* BookViewModelTests.swift */; };
 		E5A3002A2A41C35800849C67 /* MyBooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A300292A41C35800849C67 /* MyBooksApp.swift */; };
 		E5A3002C2A41C35800849C67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A3002B2A41C35800849C67 /* ContentView.swift */; };
 		E5A3002E2A41C35900849C67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A3002D2A41C35900849C67 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		E5A300452A41C35900849C67 /* MyBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A300442A41C35900849C67 /* MyBooksUITests.swift */; };
 		E5A300472A41C35900849C67 /* MyBooksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A300462A41C35900849C67 /* MyBooksUITestsLaunchTests.swift */; };
 		E5B1B4BA2A448A0600E4F84E /* NetworkRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B1B4B92A448A0600E4F84E /* NetworkRequestMock.swift */; };
+		E5E1A7BB2A457FAA003796CB /* BooksServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1A7BA2A457FAA003796CB /* BooksServiceMock.swift */; };
 		E5FA8BE72A44381D003E8DDF /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA8BE62A44381D003E8DDF /* RequestTests.swift */; };
 		E5FA8BE92A4441B9003E8DDF /* NetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA8BE82A4441B9003E8DDF /* NetworkRequestTests.swift */; };
 		E5FA8BEB2A445954003E8DDF /* bookListRaw.json in Resources */ = {isa = PBXBuildFile; fileRef = E5FA8BEA2A445954003E8DDF /* bookListRaw.json */; };
@@ -68,6 +70,7 @@
 		E52255FD2A4246F40059392A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		E52255FF2A4254570059392A /* MyBooksEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksEndpoints.swift; sourceTree = "<group>"; };
 		E52256012A4254B60059392A /* BooksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksService.swift; sourceTree = "<group>"; };
+		E52B51672A448C9800309FE1 /* BookViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModelTests.swift; sourceTree = "<group>"; };
 		E5A300262A41C35800849C67 /* MyBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A300292A41C35800849C67 /* MyBooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksApp.swift; sourceTree = "<group>"; };
 		E5A3002B2A41C35800849C67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 		E5A300442A41C35900849C67 /* MyBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksUITests.swift; sourceTree = "<group>"; };
 		E5A300462A41C35900849C67 /* MyBooksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E5B1B4B92A448A0600E4F84E /* NetworkRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestMock.swift; sourceTree = "<group>"; };
+		E5E1A7BA2A457FAA003796CB /* BooksServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksServiceMock.swift; sourceTree = "<group>"; };
 		E5FA8BE62A44381D003E8DDF /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
 		E5FA8BE82A4441B9003E8DDF /* NetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTests.swift; sourceTree = "<group>"; };
 		E5FA8BEA2A445954003E8DDF /* bookListRaw.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookListRaw.json; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 			children = (
 				E5FA8BE52A4437F3003E8DDF /* Networking */,
 				E5FA8BF02A447EE6003E8DDF /* BookServiceTests.swift */,
+				E52B51672A448C9800309FE1 /* BookViewModelTests.swift */,
+				E5E1A7BA2A457FAA003796CB /* BooksServiceMock.swift */,
 			);
 			path = MyBooksTests;
 			sourceTree = "<group>";
@@ -385,8 +391,10 @@
 				E5FA8BF12A447EE6003E8DDF /* BookServiceTests.swift in Sources */,
 				E5FA8BED2A446768003E8DDF /* URLSessionMock.swift in Sources */,
 				E5FA8BE72A44381D003E8DDF /* RequestTests.swift in Sources */,
+				E52B51682A448C9800309FE1 /* BookViewModelTests.swift in Sources */,
 				E5FA8BE92A4441B9003E8DDF /* NetworkRequestTests.swift in Sources */,
 				E5B1B4BA2A448A0600E4F84E /* NetworkRequestMock.swift in Sources */,
+				E5E1A7BB2A457FAA003796CB /* BooksServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
