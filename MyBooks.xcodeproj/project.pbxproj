@@ -30,6 +30,7 @@
 		E5E1A7BB2A457FAA003796CB /* BooksServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1A7BA2A457FAA003796CB /* BooksServiceMock.swift */; };
 		E5E1A7BE2A45849E003796CB /* FavoriteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1A7BD2A45849E003796CB /* FavoriteListViewModel.swift */; };
 		E5E1A7C02A45A780003796CB /* Int+DotFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1A7BF2A45A780003796CB /* Int+DotFormatted.swift */; };
+		E5E1A7C42A45CC12003796CB /* FavoriteListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1A7C32A45CC12003796CB /* FavoriteListViewModelTests.swift */; };
 		E5FA8BE72A44381D003E8DDF /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA8BE62A44381D003E8DDF /* RequestTests.swift */; };
 		E5FA8BE92A4441B9003E8DDF /* NetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA8BE82A4441B9003E8DDF /* NetworkRequestTests.swift */; };
 		E5FA8BEB2A445954003E8DDF /* bookListRaw.json in Resources */ = {isa = PBXBuildFile; fileRef = E5FA8BEA2A445954003E8DDF /* bookListRaw.json */; };
@@ -74,6 +75,7 @@
 		E5E1A7BA2A457FAA003796CB /* BooksServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksServiceMock.swift; sourceTree = "<group>"; };
 		E5E1A7BD2A45849E003796CB /* FavoriteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewModel.swift; sourceTree = "<group>"; };
 		E5E1A7BF2A45A780003796CB /* Int+DotFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+DotFormatted.swift"; sourceTree = "<group>"; };
+		E5E1A7C32A45CC12003796CB /* FavoriteListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewModelTests.swift; sourceTree = "<group>"; };
 		E5FA8BE62A44381D003E8DDF /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
 		E5FA8BE82A4441B9003E8DDF /* NetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTests.swift; sourceTree = "<group>"; };
 		E5FA8BEA2A445954003E8DDF /* bookListRaw.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookListRaw.json; sourceTree = "<group>"; };
@@ -189,7 +191,7 @@
 		E5A300392A41C35900849C67 /* MyBooksTests */ = {
 			isa = PBXGroup;
 			children = (
-				E52B51672A448C9800309FE1 /* BookListViewModelTests.swift */,
+				E5E1A7C22A45CBF7003796CB /* ViewModels */,
 				E5FA8BE52A4437F3003E8DDF /* Networking */,
 				E5E1A7C12A45C02D003796CB /* Services */,
 			);
@@ -211,6 +213,15 @@
 				E5E1A7BA2A457FAA003796CB /* BooksServiceMock.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E5E1A7C22A45CBF7003796CB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E52B51672A448C9800309FE1 /* BookListViewModelTests.swift */,
+				E5E1A7C32A45CC12003796CB /* FavoriteListViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		E5FA8BE52A4437F3003E8DDF /* Networking */ = {
@@ -356,6 +367,7 @@
 				E5FA8BED2A446768003E8DDF /* URLSessionMock.swift in Sources */,
 				E5FA8BE72A44381D003E8DDF /* RequestTests.swift in Sources */,
 				E52B51682A448C9800309FE1 /* BookListViewModelTests.swift in Sources */,
+				E5E1A7C42A45CC12003796CB /* FavoriteListViewModelTests.swift in Sources */,
 				E5FA8BE92A4441B9003E8DDF /* NetworkRequestTests.swift in Sources */,
 				E5B1B4BA2A448A0600E4F84E /* NetworkRequestMock.swift in Sources */,
 				E5E1A7BB2A457FAA003796CB /* BooksServiceMock.swift in Sources */,
