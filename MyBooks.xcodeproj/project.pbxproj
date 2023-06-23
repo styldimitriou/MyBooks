@@ -189,10 +189,9 @@
 		E5A300392A41C35900849C67 /* MyBooksTests */ = {
 			isa = PBXGroup;
 			children = (
-				E5FA8BE52A4437F3003E8DDF /* Networking */,
-				E5FA8BF02A447EE6003E8DDF /* BookServiceTests.swift */,
 				E52B51672A448C9800309FE1 /* BookListViewModelTests.swift */,
-				E5E1A7BA2A457FAA003796CB /* BooksServiceMock.swift */,
+				E5FA8BE52A4437F3003E8DDF /* Networking */,
+				E5E1A7C12A45C02D003796CB /* Services */,
 			);
 			path = MyBooksTests;
 			sourceTree = "<group>";
@@ -205,14 +204,23 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		E5E1A7C12A45C02D003796CB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E5FA8BF02A447EE6003E8DDF /* BookServiceTests.swift */,
+				E5E1A7BA2A457FAA003796CB /* BooksServiceMock.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		E5FA8BE52A4437F3003E8DDF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				E5FA8BEA2A445954003E8DDF /* bookListRaw.json */,
+				E5B1B4B92A448A0600E4F84E /* NetworkRequestMock.swift */,
 				E5FA8BE82A4441B9003E8DDF /* NetworkRequestTests.swift */,
 				E5FA8BE62A44381D003E8DDF /* RequestTests.swift */,
 				E5FA8BEC2A446768003E8DDF /* URLSessionMock.swift */,
-				E5B1B4B92A448A0600E4F84E /* NetworkRequestMock.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
