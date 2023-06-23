@@ -16,7 +16,7 @@ struct BookListView: View {
             List(viewModel.books.indices, id: \.self) { index in
                 let book = viewModel.books[index]
                 HStack(spacing: 10) {
-                    CoverPageView(coverImageURL: book.coverImageURL ?? nil)
+                    CoverPageView(imageURL: book.coverImageURL, size: .cover)
                     VStack(alignment: .leading) {
                         Text(book.title)
                             .font(.headline)
