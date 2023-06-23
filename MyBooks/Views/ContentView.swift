@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject private var bookViewModel = BookViewModel()
+    @ObservedObject private var bookViewModel = BookListViewModel()
     
     var body: some View {
         TabView {

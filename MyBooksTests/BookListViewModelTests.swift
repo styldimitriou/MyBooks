@@ -1,5 +1,5 @@
 //
-//  BookViewModelTests.swift
+//  BookListViewModelTests.swift
 //  MyBooksTests
 //
 //  Created by Stylianos Dimitriou on 22/6/23.
@@ -9,8 +9,8 @@ import XCTest
 import Combine
 @testable import MyBooks
 
-class BookViewModelTests: XCTestCase {
-    var viewModel: BookViewModel!
+class BookListViewModelTests: XCTestCase {
+    var viewModel: BookListViewModel!
     var booksService: BooksServiceMock!
     var subscribers: Set<AnyCancellable>!
     
@@ -26,7 +26,7 @@ class BookViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         booksService = BooksServiceMock()
-        viewModel = BookViewModel(booksService: booksService)
+        viewModel = BookListViewModel(booksService: booksService)
         subscribers = Set<AnyCancellable>()
     }
     

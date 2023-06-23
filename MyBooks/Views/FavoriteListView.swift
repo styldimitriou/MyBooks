@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavoriteListView: View {
-    @ObservedObject var bookViewModel: BookViewModel
+    @ObservedObject var bookViewModel: BookListViewModel
     
     var body: some View {
         NavigationView {
@@ -28,6 +28,6 @@ struct FavoriteListView: View {
 
 struct FavoriteListView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteListView(bookViewModel: BookViewModel())
+        FavoriteListView(bookViewModel: BookListViewModel())
     }
 }
