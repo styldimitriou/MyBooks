@@ -216,6 +216,22 @@ The app follows the MVVM (Model-View-ViewModel) architectural pattern.
 - **Dependency Inversion**: Objects like `NetworkRequest` and `BooksService` containing business logic depend on interfaces/protocols
   - Mock objects have been used to test such objects
 
+    ```swift
+    class NetworkRequestMock: Requestable {
+        var responseMock: AnyPublisher<BookListRaw, NetworkError>!
+
+        func request<T>(_ req: Request) -> AnyPublisher<T, NetworkError> where T : Decodable {
+            if let booksResponse = responseMock as? AnyPublisher<T, NetworkError> {
+                return booksResponse
+            }
+
+            fatalError("Missing booksResponse in NetworkRequestMock")
+        }
+    }
+    ```
+
+- **Pagination**: When the User scrolls to the bottom of the list, the view informs the view model to fetch the next page of books. I chose to build the next page URL using the Query Params to maintain abstraction in my Networking models.
+
 
 ## Acknowledgements
 MyBooks App utilizes the Gutendex API (https://gutendex.com/) to fetch book data.
