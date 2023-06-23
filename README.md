@@ -2,12 +2,10 @@ MyBooks
 ==
 Candidate: Stelios Dimitriou
 
-</br>
 
 # Overview
 This is a simple iOS app that displays a list of books and allows users to mark their favorite books. The app utilizes the Gutendex public API to fetch book data and demonstrates asynchronous programming using SwiftUI and Combine.
 
-</br>
 
 # Features
 The app should fulfill the following requirements:
@@ -17,22 +15,19 @@ The app should fulfill the following requirements:
 - Users can favorite as many books as they like.
 - Display a separate screen/tab that lists only the user's favorite books.
 
-</br>
 
 # Screenshots
 
 Book List             |  Favorite List
 :-------------------------:|:-------------------------:
-![](https://...Dark.png)  |  ![](https://...Ocean.png)
+![](./Screenshots/books-list.png)  |  ![](./Screenshots/favorites-list.png)
 
-</br>
 
 # Installation
 1. Clone the repository: `git clone git@github.com:stelarelas/MyBooks.git`
 2. Open the project in Xcode.
 3. Build and run the app on a simulator or device.
 
-</br>
 
 # Dependencies
 The app has the following dependencies:
@@ -41,7 +36,6 @@ The app has the following dependencies:
 - Combine: A framework for processing values over time.
 - URLSession: Apple's networking framework for making HTTP requests.
 
-</br>
 
 # Technical Info
 
@@ -222,12 +216,10 @@ The app follows the MVVM (Model-View-ViewModel) architectural pattern.
 - **Dependency Inversion**: Objects like `NetworkRequest` and `BooksService` containing business logic depend on interfaces/protocols
   - Mock objects have been used to test such objects
 
-</br>
 
 ## Acknowledgements
 MyBooks App utilizes the Gutendex API (https://gutendex.com/) to fetch book data.
 
-</br>
 
 ## Future improvements
 - Improve pagination mechanism utilizing `next` and `previous` properties from Gutendex API.
