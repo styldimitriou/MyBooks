@@ -11,7 +11,11 @@ import SwiftUI
 struct MyBooksApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if ProcessInfo.processInfo.environment["XCTestBundlePath"] != nil {
+                Text("Run Unit Tests")
+            } else {
+                ContentView()
+            }
         }
     }
 }
