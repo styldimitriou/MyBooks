@@ -6,7 +6,7 @@ The app utilizes the Gutendex public API to fetch book data and demonstrates asy
 ## Purpose
 Get familiar with SwiftUI and Combine.
 
-> **Note**
+> **Note**<br>
 > The main focus of this project was the aforementioned technologies. Thus, algorythms implemented in suboptimal version.
 
 # Screenshots
