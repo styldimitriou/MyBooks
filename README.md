@@ -6,6 +6,9 @@ The app utilizes the Gutendex public API to fetch book data and demonstrates asy
 ## Purpose
 Get familiar with SwiftUI and Combine.
 
+> **Note**
+> The main focus of this project was the aforementioned technologies. Thus, algorythms implemented in suboptimal version.
+
 # Screenshots
 
 Book List             |  Favorite List
@@ -225,12 +228,3 @@ The app follows the MVVM (Model-View-ViewModel) architectural pattern.
 
 ## Acknowledgements
 MyBooks App utilizes the Gutendex API (https://gutendex.com/) to fetch book data.
-
-
-## Future improvements
-- Improve pagination mechanism utilizing `next` and `previous` properties from Gutendex API.
-- Improve infinite scrolling mechanism. Checking if every cell contains the last book is expensive and should be avoided.
-- Improve UX by adding unfavorite functionality in Favorite list screen.
-- Use mock data for PreviewProviders to avoid network calls due to ViewModel instances
-- Improve UX by implementing a smoother animation when loading book covers
-- Implement UI tests
