@@ -1,20 +1,10 @@
 MyBooks
 ==
-Candidate: Stelios Dimitriou
+This is a simple iOS app that displays a list of books and allows users to mark their favorites. 
+The app utilizes the Gutendex public API to fetch book data and demonstrates asynchronous programming using SwiftUI and Combine.
 
-
-# Overview
-This is a simple iOS app that displays a list of books and allows users to mark their favorite books. The app utilizes the Gutendex public API to fetch book data and demonstrates asynchronous programming using SwiftUI and Combine.
-
-
-# Features
-The app should fulfill the following requirements:
-
-- Display a list of books on the initial screen.
-- Each book listing should show the title, author, and cover image.
-- Users can favorite as many books as they like.
-- Display a separate screen/tab that lists only the user's favorite books.
-
+## Purpose
+Get familiar with SwiftUI and Combine.
 
 # Screenshots
 
